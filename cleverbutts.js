@@ -23,30 +23,12 @@ var things = config.startMessages
 
 var thing = things[Math.floor(Math.random()*things.length)];
 
-DBots[0].on("ready", function(){
-  availableAccounts++
-  console.log("[info] Bot 1 logged in as " + DBots[0].user.name + "#" + DBots[0].user.discriminator + " (" + DBots[0].user.id + ")")
-});
-
-DBots[1].on("ready", function(){
-  availableAccounts++
-  console.log("[info] Bot 2 logged in as " + DBots[1].user.name + "#" + DBots[1].user.discriminator + " (" + DBots[1].user.id + ")")
-});
-
-DBots[2].on("ready", function(){
-  availableAccounts++
-  console.log("[info] Bot 3 logged in as " + DBots[2].user.name + "#" + DBots[2].user.discriminator + " (" + DBots[2].user.id + ")")
-});
-
-DBots[3].on("ready", function(){
-  availableAccounts++
-  console.log("[info] Bot 4 logged in as " + DBots[3].user.name + "#" + DBots[3].user.discriminator + " (" + DBots[3].user.id + ")")
-});
-
-DBots[4].on("ready", function(){
-  availableAccounts++
-  console.log("[info] Bot 5 logged in as " + DBots[4].user.name + "#" + DBots[4].user.discriminator + " (" + DBots[4].user.id + ")")
-});
+for ( var i in DBots ) {
+	DBots[ i ].on( "ready", function() {
+		availableAccounts++
+		console.log("[info] Bot " + i + " logged in as " + DBots[i].user.name + "#" + DBots[i].user.discriminator + " (" + DBots[i].user.id + ")")
+	} );
+}
 
 DBots[0].loginWithToken(config.bot1);
 DBots[1].loginWithToken(config.bot2);
