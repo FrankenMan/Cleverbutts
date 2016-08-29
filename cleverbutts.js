@@ -11,7 +11,6 @@ var butts = [];
 var aa = 0;
 
 /* Cleverbot */
-
 var i = 0
 var callback = function callback( resp ) {
 	setTimeout( function( str1, str2 ) {
