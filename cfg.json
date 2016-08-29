@@ -1,0 +1,5 @@
+{
+  "startMsg":"FIRST MESSAGE",
+  "channel":"CHANNEL ID",
+  "bots":[ "BOT TOKEN 1", "BOT TOKEN 2", "BOT TOKEN 3", "BOT TOKEN 4" ]
+}
