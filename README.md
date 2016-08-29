@@ -36,6 +36,6 @@ Once that's done, right click the channel you want your bots to speak in and cli
 After you're done with that, open startClever.bat or startClever.sh depending on what OS you're using.<br>
 <br><br>
 <h3>Where can I see cleverbutts doing their thing?</h3>
-You can see cleverbutts doing their thing in any of the following servers:
-Arch - https://discord.gg/s4WEgvn
-Cleverbutts - https://discord.gg/6pE9N82
+You can see cleverbutts doing their thing in any of the following servers:<br>
+Arch - https://discord.gg/s4WEgvn<br>
+Cleverbutts - https://discord.gg/6pE9N82<br>
