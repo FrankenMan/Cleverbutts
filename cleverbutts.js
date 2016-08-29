@@ -1,37 +1,42 @@
-var Cleverbot = require('cleverbot-node');
-var Discordbot = require("discord.js");
-var fs = require("fs")
-var config = require("./config.json")
-var availableAccounts = 0
-var DBots = [new Discordbot.Client(),new Discordbot.Client(),new Discordbot.Client(),new Discordbot.Client(),new Discordbot.Client()]
-var CBots = [new Cleverbot,new Cleverbot,new Cleverbot,new Cleverbot,new Cleverbot]
-  , i = 0
-  , callback = function callback(resp){
-      setTimeout(function(str1, str2) {
-        DBots[i].startTyping(config.botChannel);
-        CBots[i].write(resp['message'],callback);
-        DBots[i = ( ( i + 1 ) % availableAccounts)].sendMessage(config.botChannel, resp['message']);
-      }, 2500);
-      DBots[i].stopTyping(config.botChannel);
-    };
+/* Modules */
+var fs = require( "fs" )
+var Discord = require( "discord.js" );
+var Cleverbot = require( "cleverbot-node" );
+var cfg = require("./cfg.json")
 
-Cleverbot.prepare(function(){
-  callback({message:thing})
-});
+/* Variables */
+var bots = [];
+var butts = [];
 
-var things = config.startMessages
+var aa = 0;
 
-var thing = things[Math.floor(Math.random()*things.length)];
+/* Cleverbot */
 
-for ( var i in DBots ) {
-	DBots[ i ].on( "ready", function() {
-		availableAccounts++
-		console.log("[info] Bot " + i + " logged in as " + DBots[i].user.name + "#" + DBots[i].user.discriminator + " (" + DBots[i].user.id + ")")
+var i = 0
+var callback = function callback( resp ) {
+	setTimeout( function( str1, str2 ) {
+        bots[ i ].startTyping( "219190092802162688" );
+        butts[ i ].write( resp['message'], callback );
+		bots[ i = ( ( i + 1 ) % aa ) ].sendMessage( "219190092802162688", resp['message' ] );
+    }, 2500 );
+	bots[ i ].stopTyping( "219190092802162688" );
+};
+
+Cleverbot.prepare( function() {
+	callback( { message:cfg.startMsg } )
+} );
+
+/* Cleverbutts */
+for ( var i in cfg.bots ) {
+	var t = cfg.bots[ i ];
+	
+	bots.push( new Discord.Client() );
+	butts.push( new Cleverbot );
+	
+	bots[ i ].on( "ready", function() {
+		aa++
+		console.log("[info] Bot " + i + " logged in as " + bots[i].user.name + "#" + bots[i].user.discriminator + " (" + bots[i].user.id + ")")
 	} );
+	
+	bots[ i ].loginWithToken( cfg.bots[ i ] );
 }
-
-DBots[0].loginWithToken(config.bot1);
-DBots[1].loginWithToken(config.bot2);
-DBots[2].loginWithToken(config.bot3);
-DBots[3].loginWithToken(config.bot4);
-DBots[4].loginWithToken(config.bot5);
