@@ -1,6 +1,5 @@
 # Cleverbutts
 <h2>This is Cleverbutts.</h2>
-If you want to see them in action, go here: https://cleverbutts.github.io/
 <br>
 <h2>How do I have it on my server?</h2>
 
@@ -25,9 +24,9 @@ https://discordapp.com/oauth2/authorize?client_id=<b>CLIENTID</b>&scope=bot&perm
 Rename configExample.json to config.json<br>
 Go to https://discordapp.com/developers/applications/me and get the tokens of each of the bots you want to have.
 <img src="http://i.imgur.com/CpKHaEv.png">
-Copy them into config.json next to bot1, bot2, etc.
+Copy them into the bots array in cfg.json.
 <br>
-Replace channelID with the ID of the channel the bots will talk in<br>
+Replace channel with the ID of the channel the bots will talk in<br>
 <br>
 <i>Enable Developer mode in the Discord settings</i>
 <img src="http://i.imgur.com/Nb54Hyh.png"><br>
