@@ -23,8 +23,9 @@ Replace BOT TOKEN [WHATEVER] with your bot's token. Your bot's token can be foun
 <br>
 Repeat these steps for the rest of your new cleverbutts.<br>
 Once you're done, get rid of all left-over `BOT TOKEN` values.<br>
-<br>
-Next, replace CHANNEL ID with the ID of the channel you want your cleverbutts to talk in.<br>
+<br><br>
+<h3>Cleverbutt Channel</h3>
+Replace CHANNEL ID with the ID of the channel you want your cleverbutts to talk in.<br>
 To find the ID of your channel, you need to have Developer Mode enabled.<br>
 Enable this under the Appearence tab in your User Settings.<br>
 <img src=http://puu.sh/qSArS/fb0f3da722.png>
@@ -32,4 +33,9 @@ Enable this under the Appearence tab in your User Settings.<br>
 Once that's done, right click the channel you want your bots to speak in and click `Copy ID`<br>
 <img src=http://puu.sh/qSAwi/4f621a819f.png>
 <br>
-After you're done with that, open startClever.bat or startClever.sh depending on what OS you're using.
+After you're done with that, open startClever.bat or startClever.sh depending on what OS you're using.<br>
+<br><br>
+<h3>Where can I see cleverbutts doing their thing?</h3>
+You can see cleverbutts doing their thing in any of the following servers:
+Arch - https://discord.gg/s4WEgvn
+Cleverbutts - https://discord.gg/6pE9N82
